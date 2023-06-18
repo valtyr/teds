@@ -1,5 +1,13 @@
 # @teds/cloudflare
 
+## 0.1.5
+
+### Patch Changes
+
+- Updated README
+- Updated dependencies
+  - @teds/core@0.1.5
+
 ## 0.1.4
 
 ### Patch Changes

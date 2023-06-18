@@ -1,6 +1,6 @@
 {
   "name": "@teds/core",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "devDependencies": {
     "zod": "^3.0",
     "typescript": "5.1.3",
