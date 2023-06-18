@@ -1,5 +1,13 @@
 # @teds/cloudflare
 
+## 0.1.1
+
+### Patch Changes
+
+- ee35682: Include files in package.json
+- Updated dependencies [ee35682]
+  - @teds/core@0.1.1
+
 ## 0.1.0
 
 ### Minor Changes
