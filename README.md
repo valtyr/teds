@@ -74,17 +74,22 @@ const route = app
     const userId = req.param("id");
     return subscribe(env.PRODUCER_DO, userId, req.raw);
   })
-  .on(["POST"], "/api/member/update", ({ env, req }) => {
+  .on(["POST"], "/api/member/update", async ({ env, req }) => {
+    const userId = "123";
+
     // This factory code could be hidden away in a context creator
     const dispatcher = createDispatcherProxy(
       rootEventRouter,
       env.WORKSPACE_PRODUCER,
-      workspaceSlug
+
+      // This third parameter controls the instance you connect to
+      // this could be based on user ID, org ID etc.
+      userId
     );
 
     // Dispatch an event
     await dispatcher.member.memberUpdated({
-      memberId: '123',
+      memberId: "123",
     });
   });
 
