@@ -13,6 +13,9 @@
   "scripts": {
     "build": "tsup src/index.ts  --format esm,cjs --dts"
   },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "typings": "dist/index.d.ts",
   "exports": {
     "./package.json": "./package.json",
     ".": {
