@@ -1,5 +1,7 @@
 # TEDS - Typed event dispatch system
 
+> ⚠️ **Experimental**
+
 ## Getting started
 
 This guide assumes you use Cloudflare Workers and React.
