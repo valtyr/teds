@@ -1,5 +1,13 @@
 # @teds/react
 
+## 0.1.4
+
+### Patch Changes
+
+- eaa8d3d: Add main export fields in package.json
+- Updated dependencies [eaa8d3d]
+  - @teds/core@0.1.4
+
 ## 0.1.3
 
 ### Patch Changes
