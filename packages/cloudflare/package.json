@@ -1,5 +1,6 @@
 {
   "name": "@teb/cloudflare",
+  "version": "0.0.0",
   "dependencies": {
     "@teb/core": "workspace:*"
   },
