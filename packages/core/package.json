@@ -23,12 +23,7 @@
     }
   },
   "files": [
-    "./dist/index.mjs",
-    "./dist/index.js",
-    "./dist/index.d.ts",
-    "./dist/proxy.mjs",
-    "./dist/proxy.js",
-    "./dist/proxy.d.ts",
+    "./dist/*",
     "./package.json"
   ]
 }
