@@ -1,7 +1,6 @@
-import { z } from "zod";
-
 import { EventDef, RouterDef } from "@teb/core";
 import { createRecursiveProxy } from "@teb/core/proxy";
+import { z } from "zod";
 
 const ProducerErrorCodes = {
   PATH_MISSING: "Path missing from query",

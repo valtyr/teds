@@ -11,20 +11,23 @@ jobs:
     if: github.event.issue.pull_request && contains(github.event.comment.body, '/snapshot')
     runs-on: ubuntu-latest
     steps:
-      - name: 🏗 Setup repo
+ - name: 🏗 Setup repo
         uses: actions/checkout@v2
+
+      - name: 🏗 Setup pnpm
+        uses: pnpm/action-setup@v2
         with:
-          ref: refs/pull/${{ github.event.issue.number }}/head
+          version: 8.3.1
 
       - name: 🏗 Setup Node
         uses: actions/setup-node@v2
         with:
           node-version: 16.x
-          cache: yarn
+          cache: pnpm
 
       - name: 📦 Install dependencies
-        run: yarn install
-
+        run: pnpm install
+  
       - name: 🪤 Create .npmrc
         run: |
           cat << EOF > "$HOME/.npmrc"
@@ -35,9 +38,9 @@ jobs:
 
       - name: 🆓 Release snapshot
         run: |
-          yarn build
-          yarn changeset version --snapshot snapshot
-          yarn changeset publish --tag snapshot
+          pnpm run build
+          pnpm run changeset version --snapshot snapshot
+          pnpm run changeset publish --tag snapshot
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

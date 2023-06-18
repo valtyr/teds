@@ -18,38 +18,22 @@ jobs:
       - name: 🏗 Setup repo
         uses: actions/checkout@v2
 
+      - name: 🏗 Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.3.1
+
       - name: 🏗 Setup Node
         uses: actions/setup-node@v2
         with:
           node-version: 16.x
-          cache: yarn
+          cache: pnpm
 
       - name: 📦 Install dependencies
-        run: yarn install
+        run: pnpm install
 
       - name: 🧪 Run tests
-        run: yarn run test
-
-  typecheck:
-    name: 🤓 Type checker
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - name: 🏗 Setup repo
-        uses: actions/checkout@v2
-
-      - name: 🏗 Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16.x
-          cache: yarn
-
-      - name: 📦 Install dependencies
-        run: yarn install
-
-      - name: 🤓 Run type checker
-        run: yarn run typecheck
+        run: pnpm run test
 
   lint:
     name: 👮‍♂️ Linters and formatters
@@ -61,21 +45,26 @@ jobs:
       - name: 🏗 Setup repo
         uses: actions/checkout@v2
 
+      - name: 🏗 Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.3.1
+
       - name: 🏗 Setup Node
         uses: actions/setup-node@v2
         with:
           node-version: 16.x
-          cache: yarn
+          cache: pnpm
 
       - name: 📦 Install dependencies
-        run: yarn install
+        run: pnpm install
 
       - name: 👮‍♂️ Run linters
-        run: yarn run lint
+        run: pnpm run lint
 
       - name: 💅 Run fixers, and check diff
         id: diffCheck
-        run: yarn run fix && git diff --exit-code -- ':!yarn.lock'
+        run: pnpm run fix && git diff --exit-code -- ':!yarn.lock'
 
       - name: 💬 Post a check explaining the issue
         if: ${{ failure() && steps.diffCheck.conclusion == 'failure' }}

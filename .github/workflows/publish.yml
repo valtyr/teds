@@ -12,22 +12,28 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
+      - name: 🏗 Setup repo
+        uses: actions/checkout@v2
 
-      - name: Setup Node.js 16.x
-        uses: actions/setup-node@v3
+      - name: 🏗 Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.3.1
+
+      - name: 🏗 Setup Node
+        uses: actions/setup-node@v2
         with:
           node-version: 16.x
+          cache: pnpm
 
-      - name: Install Dependencies
-        run: yarn
+      - name: 📦 Install dependencies
+        run: pnpm install
 
-      - name: Create Release Pull Request or Publish to npm
+      - name: 🦅 Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: yarn release
+          publish: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

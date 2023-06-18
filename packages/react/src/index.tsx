@@ -1,12 +1,10 @@
-import React, { useContext, useEffect, useRef } from "react";
-
+import { EventDef, RouterDef } from "@teb/core";
+import { createFlatProxy, createRecursiveProxy } from "@teb/core/proxy";
 import { Emitter, createNanoEvents } from "nanoevents";
+import React, { useContext, useEffect, useRef } from "react";
 import { ReadyState } from "react-use-websocket";
 import { useWebSocket } from "react-use-websocket/dist/lib/use-websocket";
 import { z } from "zod";
-
-import { EventDef, RouterDef } from "@teb/core";
-import { createFlatProxy, createRecursiveProxy } from "@teb/core/proxy";
 
 type EmitterEventMap = {
   event(path: string[], data: any): void;

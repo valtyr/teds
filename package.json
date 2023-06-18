@@ -13,7 +13,7 @@
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
     "typecheck": "turbo run typecheck",
-    "fix": "turbo run fix",
+    "fix": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
     "test": "turbo run test",
     "publish-packages": "turbo run build lint test && changeset version && changeset publish",
@@ -34,6 +34,9 @@
       "^[./]"
     ],
     "importOrderSeparation": true,
-    "importOrderSortSpecifiers": true
+    "importOrderSortSpecifiers": true,
+    "plugins": [
+      "@trivago/prettier-plugin-sort-imports"
+    ]
   }
 }
