@@ -1,0 +1,36 @@
+{
+  "include": [
+    "packages",
+    "types",
+    "scripts",
+    "examples",
+    "rollup.config.ts",
+    ".eslintrc.js"
+  ],
+  "exclude": [],
+  "compilerOptions": {
+    "module": "esnext",
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "target": "es2020",
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "./dist",
+    "strict": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "esModuleInterop": true,
+
+    "allowJs": false,
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "paths": {
+      "@teb/core": ["packages/core/src"],
+      "@teb/core/*": ["packages/core/src/*"],
+      "@teb/react": ["packages/react/src"],
+      "@teb/react/*": ["packages/react/src/*"],
+      "@teb/cloudflare": ["packages/cloudflare/src"],
+      "@teb/cloudflare/*": ["packages/cloudflare/src/*"]
+    }
+    // "types": ["node", "vitest/globals"]
+  }
+}

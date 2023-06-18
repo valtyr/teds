@@ -1,0 +1,15 @@
+{
+  "name": "@teb/cloudflare",
+  "dependencies": {
+    "@teb/core": "workspace:*"
+  },
+  "devDependencies": {
+    "zod": "^3.0",
+    "@cloudflare/workers-types": "4.20230518.0",
+    "typescript": "5.1.3",
+    "tsup": "^7.0.0"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts  --format esm,cjs --dts"
+  }
+}

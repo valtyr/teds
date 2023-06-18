@@ -1,0 +1,11 @@
+{
+  "folders": [
+    { "name": "🍏\t@teb/core", "path": "./packages/core" },
+    { "name": "🌩️\t@teb/cloudflare", "path": "./packages/cloudflare" },
+    { "name": "⚛️\t@teb/react", "path": "./packages/react" },
+    { "name": "🌴\troot", "path": "." }
+  ],
+  "settings": {
+    "typescript.preferences.importModuleSpecifier": "non-relative"
+  }
+}

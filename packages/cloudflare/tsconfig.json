@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["src"],
+  "compilerOptions": {
+    "lib": ["ES2020"],
+    "types": ["@cloudflare/workers-types"],
+    "target": "ES2020"
+  }
+}
