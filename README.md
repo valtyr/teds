@@ -72,6 +72,9 @@ const app = new Hono<HonoBindings>();
 const route = app
   .on(["GET"], "/api/events/user/:id", ({ env, req }) => {
     const userId = req.param("id");
+
+    // Route incoming request to the Durable Object
+    // and return a WebSocket connection
     return subscribe(env.PRODUCER_DO, userId, req.raw);
   })
   .on(["POST"], "/api/member/update", async ({ env, req }) => {
