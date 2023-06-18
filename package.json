@@ -16,7 +16,7 @@
     "fix": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
     "test": "turbo run test",
-    "publish-packages": "turbo run build lint test && changeset version && changeset publish",
+    "publish-packages": "turbo run build lint test && changeset version && pnpm run ci:publish",
     "ci:publish": "pnpm publish -r --access public",
     "edit": "code ."
   },

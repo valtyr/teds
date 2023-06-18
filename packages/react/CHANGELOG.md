@@ -1,5 +1,13 @@
 # @teds/react
 
+## 0.1.2
+
+### Patch Changes
+
+- Attempt to fix NPM publish
+- Updated dependencies
+  - @teds/core@0.1.2
+
 ## 0.1.1
 
 ### Patch Changes

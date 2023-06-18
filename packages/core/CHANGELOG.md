@@ -1,5 +1,11 @@
 # @teds/core
 
+## 0.1.2
+
+### Patch Changes
+
+- Attempt to fix NPM publish
+
 ## 0.1.1
 
 ### Patch Changes
