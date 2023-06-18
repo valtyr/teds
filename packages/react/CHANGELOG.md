@@ -1,5 +1,13 @@
 # @teds/react
 
+## 0.1.3
+
+### Patch Changes
+
+- 64d3a82: Attempt to fix NPM publish
+- Updated dependencies [64d3a82]
+  - @teds/core@0.1.3
+
 ## 0.1.2
 
 ### Patch Changes
