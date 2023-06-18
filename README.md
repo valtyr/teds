@@ -101,12 +101,6 @@ export default app;
 export { Producer } from "./producer.ts";
 ```
 
-Now the only thing left to do is to create some events! Call the following anywhere in your code:
-
-```ts
-
-```
-
 Your server should now be ready to go! On to the client...
 
 ### Client side
