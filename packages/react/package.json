@@ -1,10 +1,10 @@
 {
-  "name": "@teb/react",
+  "name": "@teds/react",
   "version": "0.1.0",
   "dependencies": {
     "react-use-websocket": "^4.3.1",
     "nanoevents": "^7.0.1",
-    "@teb/core": "workspace:*"
+    "@teds/core": "workspace:*"
   },
   "peerDependencies": {
     "react": "^18.2"

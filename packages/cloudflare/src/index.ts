@@ -1,5 +1,5 @@
-import { EventDef, RouterDef } from "@teb/core";
-import { createRecursiveProxy } from "@teb/core/proxy";
+import { EventDef, RouterDef } from "@teds/core";
+import { createRecursiveProxy } from "@teds/core/proxy";
 import { z } from "zod";
 
 const ProducerErrorCodes = {

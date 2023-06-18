@@ -1,5 +1,5 @@
-import { EventDef, RouterDef } from "@teb/core";
-import { createFlatProxy, createRecursiveProxy } from "@teb/core/proxy";
+import { EventDef, RouterDef } from "@teds/core";
+import { createFlatProxy, createRecursiveProxy } from "@teds/core/proxy";
 import { Emitter, createNanoEvents } from "nanoevents";
 import React, { useContext, useEffect, useRef } from "react";
 import { ReadyState } from "react-use-websocket";
@@ -52,7 +52,7 @@ export function createConsumer<
 
     const { readyState } = useWebSocket(url, {
       onOpen() {
-        log(`@teb/react: Connected to url: ${url}`);
+        log(`@teds/react: Connected to url: ${url}`);
       },
       onMessage(event) {
         try {

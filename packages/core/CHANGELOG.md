@@ -1,4 +1,4 @@
-# @teb/core
+# @teds/core
 
 ## 0.1.0
 

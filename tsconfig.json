@@ -24,12 +24,12 @@
     "baseUrl": ".",
     "skipLibCheck": true,
     "paths": {
-      "@teb/core": ["packages/core/src"],
-      "@teb/core/*": ["packages/core/src/*"],
-      "@teb/react": ["packages/react/src"],
-      "@teb/react/*": ["packages/react/src/*"],
-      "@teb/cloudflare": ["packages/cloudflare/src"],
-      "@teb/cloudflare/*": ["packages/cloudflare/src/*"]
+      "@teds/core": ["packages/core/src"],
+      "@teds/core/*": ["packages/core/src/*"],
+      "@teds/react": ["packages/react/src"],
+      "@teds/react/*": ["packages/react/src/*"],
+      "@teds/cloudflare": ["packages/cloudflare/src"],
+      "@teds/cloudflare/*": ["packages/cloudflare/src/*"]
     }
     // "types": ["node", "vitest/globals"]
   }

@@ -1,8 +1,8 @@
 {
-  "name": "@teb/cloudflare",
+  "name": "@teds/cloudflare",
   "version": "0.1.0",
   "dependencies": {
-    "@teb/core": "workspace:*"
+    "@teds/core": "workspace:*"
   },
   "devDependencies": {
     "zod": "^3.0",

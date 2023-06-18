@@ -1,8 +1,8 @@
 {
-  "name": "teb",
+  "name": "teds",
   "description": "Typed event broker",
   "repository": {
-    "url": "https://github.com/valtyr/teb"
+    "url": "https://github.com/valtyr/teds"
   },
   "version": "0.0.0",
   "files": [

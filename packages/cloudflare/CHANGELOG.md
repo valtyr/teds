@@ -1,4 +1,4 @@
-# @teb/cloudflare
+# @teds/cloudflare
 
 ## 0.1.0
 
@@ -9,4 +9,4 @@
 ### Patch Changes
 
 - Updated dependencies [bb7c177]
-  - @teb/core@0.1.0
+  - @teds/core@0.1.0

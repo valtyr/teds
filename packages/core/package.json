@@ -1,5 +1,5 @@
 {
-  "name": "@teb/core",
+  "name": "@teds/core",
   "version": "0.1.0",
   "devDependencies": {
     "zod": "^3.0",

@@ -1,1 +1,1 @@
-# TEB - Typed event broker
+# TEDS - Typed event dispatch system
