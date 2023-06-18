@@ -18,6 +18,8 @@ pnpm add zod @teds/react
 
 ### Server side
 
+This guide assumes you have a Durable Object bound to your worker named `PRODUCER_DO`.
+
 Define your events using zod schemas:
 
 ```ts
@@ -52,19 +54,49 @@ export type rootEventRouter = typeof rootEventRouter;
 Make sure to expose the WS endpoint in your routing code and export your durable object class from the root of your main script file. Here's an example that uses hono for routing:
 
 ```ts
-import { subscribe } from "@teds/cloudflare";
+import { createDispatcherProxy, subscribe } from "@teds/cloudflare";
 import { Hono } from "hono";
+
+import { rootEventRouter } from "./producer.ts";
+
+export type Env = {
+  PRODUCER_DO: DurableObjectNamespace;
+};
+
+export type HonoBindings = {
+  Bindings: Env;
+};
 
 const app = new Hono<HonoBindings>();
 
-const route = app.on(["GET"], "/api/events/user/:id", ({ env, req }) => {
-  const userId = req.param("id");
-  return subscribe(env.PRODUCER_DO, userId, req.raw);
-});
+const route = app
+  .on(["GET"], "/api/events/user/:id", ({ env, req }) => {
+    const userId = req.param("id");
+    return subscribe(env.PRODUCER_DO, userId, req.raw);
+  })
+  .on(["POST"], "/api/member/update", ({ env, req }) => {
+    // This factory code could be hidden away in a context creator
+    const dispatcher = createDispatcherProxy(
+      rootEventRouter,
+      env.WORKSPACE_PRODUCER,
+      workspaceSlug
+    );
+
+    // Dispatch an event
+    await dispatcher.member.memberUpdated({
+      memberId: '123',
+    });
+  });
 
 export default app;
 
 export { Producer } from "./producer.ts";
+```
+
+Now the only thing left to do is to create some events! Call the following anywhere in your code:
+
+```ts
+
 ```
 
 Your server should now be ready to go! On to the client...
