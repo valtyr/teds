@@ -17,6 +17,7 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "publish-packages": "turbo run build lint test && changeset version && changeset publish",
+    "ci:publish": "pnpm publish -r",
     "edit": "code ."
   },
   "dependencies": {
