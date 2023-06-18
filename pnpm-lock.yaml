@@ -23,7 +23,7 @@ importers:
 
   packages/cloudflare:
     dependencies:
-      '@teb/core':
+      '@teds/core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -54,7 +54,7 @@ importers:
 
   packages/react:
     dependencies:
-      '@teb/core':
+      '@teds/core':
         specifier: workspace:*
         version: link:../core
       nanoevents:
