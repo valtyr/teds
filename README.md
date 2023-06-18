@@ -1,6 +1,11 @@
-# TEDS - Typed event dispatch system
+# tEDS - Typed event dispatch system
 
 > ⚠️ **Experimental**
+
+## Example
+
+A StackBlitz example will be out soon.
+In the meantime you can try it out by cloning this repository: http://github.com/valtyr/teds-example.
 
 ## Getting started
 
