@@ -12,5 +12,19 @@
   },
   "scripts": {
     "build": "tsup src/index.ts  --format esm,cjs --dts"
-  }
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "./dist/index.mjs",
+    "./dist/index.js",
+    "./dist/index.d.ts",
+    "./package.json"
+  ]
 }

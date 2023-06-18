@@ -15,6 +15,20 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.js",
       "default": "./dist/index.js"
+    },
+    "./proxy": {
+      "import": "./dist/proxy.mjs",
+      "require": "./dist/proxy.js",
+      "default": "./dist/proxy.js"
     }
-  }
+  },
+  "files": [
+    "./dist/index.mjs",
+    "./dist/index.js",
+    "./dist/index.d.ts",
+    "./dist/proxy.mjs",
+    "./dist/proxy.js",
+    "./dist/proxy.d.ts",
+    "./package.json"
+  ]
 }
